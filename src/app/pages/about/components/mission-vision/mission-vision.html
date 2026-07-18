@@ -1,1 +1,192 @@
-<p>mission-vision works!</p>
+<section class="bg-[#090909] py-18">
+
+    <div class="max-w-7xl mx-auto px-8">
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+
+            <!-- LEFT -->
+
+            <div class="lg:col-span-5">
+
+                <p
+                    class="uppercase
+                           tracking-[0.35em]
+                           text-[#C8A75B]
+                           text-sm
+                           font-semibold">
+
+                    Who We Are
+
+                </p>
+
+                <h2
+                    class="mt-6
+                           text-4xl
+                           font-light
+                           leading-tight
+                           text-white">
+
+                    A Long-Term Partner In
+                    <br>
+
+                    Building What Matters
+
+                </h2>
+
+                <div
+                    class="w-16
+                           h-px
+                           bg-[#C8A75B]/70
+                           my-4">
+                </div>
+
+                <p
+                    class="text-gray-400
+                           text-lg
+                           leading-8
+                           mb-4">
+
+                    We identify opportunities, invest in innovative
+                    businesses, and provide the strategic support
+                    needed to build market-leading companies across
+                    Africa and beyond.
+
+                </p>
+
+                <p
+                    class="text-gray-400
+                           text-lg
+                           leading-8">
+
+                    Our approach is rooted in integrity, disciplined
+                    capital allocation, and a deep belief in the
+                    potential of entrepreneurs and communities.
+
+                </p>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div
+                class="lg:col-span-7">
+
+                <div
+                    class="grid
+                           md:grid-cols-2
+                           gap-8">
+
+                    @for(card of cards; track card.title){
+
+                    <div
+                        class="group
+                               rounded-3xl
+                               border
+                               border-white/10
+                               bg-gradient-to-b
+                               from-white/[0.03]
+                               to-transparent
+                               p-10
+                               transition-all
+                               duration-500
+                               hover:border-[#C8A75B]/40
+                               hover:-translate-y-2">
+
+                        <!-- ICON -->
+
+                        <div
+                            class="w-14
+                                   h-14
+                                   rounded-full
+                                   border
+                                   border-[#C8A75B]/30
+                                   flex
+                                   items-center
+                                   justify-center
+                                   mb-3">
+
+                            <!-- Mission -->
+
+                            @if(card.icon === 'mission'){
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                class="w-8 h-8 text-[#C8A75B]">
+
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="1.7"
+                                      d="M12 2l3 7h7l-5.5 4.2L18 21l-6-4-6 4 1.5-7.8L2 9h7z"/>
+
+                            </svg>
+
+                            }
+
+                            <!-- Vision -->
+
+                            @if(card.icon === 'vision'){
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                class="w-8 h-8 text-[#C8A75B]">
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1.7"
+                                    d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7zm10 3a3 3 0 100-6 3 3 0 000 6z"/>
+
+                            </svg>
+
+                            }
+
+                        </div>
+
+                        <h3
+                            class="text-white
+                                   text-2xl
+                                   font-light">
+
+                            {{card.title}}
+
+                        </h3>
+
+                        <!-- Divider -->
+
+                        <div
+                            class="w-14
+                                   h-px
+                                   bg-[#C8A75B]/60
+                                   my-6
+                                   transition-all
+                                   duration-500
+                                   group-hover:w-24">
+                        </div>
+
+                        <p
+                            class="text-gray-400
+                                   leading-8">
+
+                            {{card.description}}
+
+                        </p>
+
+                    </div>
+
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

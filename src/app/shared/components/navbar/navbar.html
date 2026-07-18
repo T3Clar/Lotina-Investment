@@ -1,1 +1,74 @@
-<p>navbar works!</p>
+<nav
+  class="navbar"
+  [class.scrolled]="isScrolled"
+>
+
+  <!-- Logo -->
+  <a routerLink="/" class="logo">
+    LOTINA
+  </a>
+
+  <!-- Desktop Navigation -->
+  <div class="desktop-nav">
+
+    <a
+      routerLink="/"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{exact:true}">
+      Home
+    </a>
+
+    <a routerLink="/about" routerLinkActive="active-link">
+      About
+    </a>
+
+    <a routerLink="/ecosystem" routerLinkActive="active-link">
+      Ecosystem
+    </a>
+
+    <a routerLink="/investments" routerLinkActive="active-link">
+      Investments
+    </a>
+
+    <a routerLink="/innovation" routerLinkActive="active-link">
+      Innovation
+    </a>
+
+    <a routerLink="/insights" routerLinkActive="active-link">
+      Insights
+    </a>
+
+    <a routerLink="/contact" routerLinkActive="active-link">
+      Contact
+    </a>
+
+  </div>
+
+  <!-- CTA -->
+  <button class="contact-btn">
+    Partner With Us
+  </button>
+
+  <!-- Mobile Button -->
+  <button
+    class="mobile-toggle"
+    (click)="toggleMenu()"
+  >
+    ☰
+  </button>
+
+</nav>
+
+<!-- Mobile Menu -->
+<div
+  class="mobile-menu"
+  [class.open]="mobileMenuOpen"
+>
+  <a routerLink="/" (click)="toggleMenu()">Home</a>
+  <a routerLink="/about" (click)="toggleMenu()">About</a>
+  <a routerLink="/ecosystem" (click)="toggleMenu()">Ecosystem</a>
+  <a routerLink="/investments" (click)="toggleMenu()">Investments</a>
+  <a routerLink="/innovation" (click)="toggleMenu()">Innovation</a>
+  <a routerLink="/insights" (click)="toggleMenu()">Insights</a>
+  <a routerLink="/contact" (click)="toggleMenu()">Contact</a>
+</div>

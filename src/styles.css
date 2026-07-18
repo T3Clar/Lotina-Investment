@@ -1,3 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+@plugin "daisyui";
+
+:root {
+  /* Backgrounds */
+  --lotina-black: #0B0B0B;
+  --lotina-graphite: #151515;
+  --lotina-card: #1D1D1D;
+  --lotina-surface: #242424;
+
+  /* Typography */
+  --lotina-white: #FFFFFF;
+  --lotina-silver: #D9D9D9;
+  --lotina-grey: #A8A8A8;
+  --lotina-muted: #6F6F6F;
+
+  /* Primary Accent (main identity) */
+  --lotina-accent: #C0C0C0;      /* Metallic Silver */
+
+  /* Secondary Accent (minimal use only) */
+  --lotina-gold: #C8A96B;
+  --lotina-gold-hover: #D4B57A;
+
+  /* Borders */
+  --lotina-border: #3A3A3A;
+  --lotina-border-hover: #555555;
+}

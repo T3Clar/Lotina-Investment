@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './featured-companies.html',
   styleUrl: './featured-companies.css',
 })
-export class FeaturedCompanies {}
+export class FeaturedCompanies {
+  
+}
