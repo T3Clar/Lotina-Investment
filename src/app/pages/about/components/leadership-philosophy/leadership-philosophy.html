@@ -1,1 +1,58 @@
-<p>leadership-philosophy works!</p>
+<section class="bg-[#090909]">
+    <div class="max-w-7xl mx-auto px-8">
+
+        <div class="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.03] to-transparent">
+            <div class="grid lg:grid-cols-5">
+
+                <!-- LEFT -->
+                <div class="lg:col-span-2 p-8 flex flex-col justify-center">
+                    <p class="uppercase tracking-[0.35em] text-[#C8A75B] text-xs font-semibold">
+                        Our Philosophy
+                    </p>
+
+                    <h2 class="mt-4 text-4xl font-light leading-tight text-white">
+                        We Invest Beyond <br> The Moment.
+                    </h2>
+
+                    <div class="w-12 h-px bg-[#C8A75B]/70 my-5"></div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="lg:col-span-3 grid md:grid-cols-3">
+                    @for(item of philosophies; track item.title){
+                    <div class="p-8 border-l border-white/10 flex flex-col justify-center">
+
+                        <!-- PEOPLE -->
+                        @if(item.icon === 'people'){
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7 text-[#C8A75B] mb-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-4 0-7 2-7 5h14c0-3-3-5-7-5z"/>
+                        </svg>
+                        }
+
+                        <!-- SOLUTIONS -->
+                        @if(item.icon === 'solutions'){
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7 text-[#C8A75B] mb-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 21l-4.3-4.3m1.3-5.2a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"/>
+                        </svg>
+                        }
+
+                        <!-- FUTURE -->
+                        @if(item.icon === 'future'){
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-7 h-7 text-[#C8A75B] mb-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 2v3m8-3v3M4 8h16M5 6h14a1 1 0 011 1v13a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1z"/>
+                        </svg>
+                        }
+
+                        <h3 class="text-white text-lg font-light leading-snug">
+                            {{ item.title }}
+                        </h3>
+
+                    </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>

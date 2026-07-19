@@ -1,1 +1,57 @@
-<p>ecosystem-diagram works!</p>
+<div class="diagram-container">
+
+    <div class="diagram">
+
+        <div class="diagram-glow"></div>
+
+        <div class="orbit-ring"></div>
+
+        <svg
+            class="connections"
+            viewBox="0 0 1000 1000"
+            preserveAspectRatio="xMidYMid meet">
+
+            @for(company of companies; track company.name){
+
+                <line
+
+                    x1="500"
+                    y1="500"
+
+                    [attr.x2]="company.x! * 10"
+                    [attr.y2]="company.y! * 10">
+
+                </line>
+
+            }
+
+        </svg>
+
+        <div class="center-node">
+
+            <img
+                src="/logos/lotina-logo-white.png"
+                alt="Lotina Investments">
+
+        </div>
+
+        @for(company of companies; track company.name){
+
+            <div
+                class="company-node"
+                [style.left.%]="company.x"
+                [style.top.%]="company.y">
+
+                <img
+                    [src]="company.logo"
+                    [alt]="company.name">
+
+                <h3>{{ company.name }}</h3>
+
+            </div>
+
+        }
+
+    </div>
+
+</div>

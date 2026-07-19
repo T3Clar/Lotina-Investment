@@ -1,0 +1,190 @@
+/* ========================================= 
+   Canvas Base & Radial Masking
+   ========================================= */
+.growth-section {
+    position: relative;
+    background: radial-gradient(circle at top, var(--lotina-card) 0%, var(--lotina-black) 75%);
+    color: #ffffff;
+}
+
+/* ========================================= 
+   Decorative Ambient Brand Glow Layers
+   ========================================= */
+.bg-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+.glow-one {
+    width: 320px;
+    height: 320px;
+    background: #C8A75B;
+    top: -100px;
+    left: -80px;
+}
+
+.glow-two {
+    width: 420px;
+    height: 420px;
+    background: #3658ff;
+    bottom: -150px;
+    right: -120px;
+}
+
+/* ========================================= 
+   Typography Structure
+   ========================================= */
+.eyebrow {
+    color: #C8A75B;
+    letter-spacing: 0.35em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+h2 {
+
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 4px;
+    letter-spacing: -0.02em;
+}
+
+@media (min-width: 1024px) {
+    h2 { font-size: 3.2rem; }
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center; /* Centers the column headers perfectly above the pills */
+}
+
+/* ========================================= 
+   Interactive Glassmorphism Pill System
+   ========================================= */
+.pill {
+    display: inline-flex;
+    padding: 14px 28px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 15px 30px rgba(0, 0, 0, 0.3);
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+        opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+        background 0.3s ease, 
+        border-color 0.3s ease, 
+        box-shadow 0.3s ease;
+}
+
+.pill:hover {
+    transform: translateY(-4px) scale(1.03);
+    border-color: #C8A75B;
+    background: rgba(200, 167, 91, 0.12);
+    box-shadow: 0 20px 40px rgba(200, 167, 91, 0.15);
+    cursor: default;
+}
+
+/* Organic Desktop Stagger Offsets */
+@media (min-width: 1024px) {
+    h3 { text-align: left; } /* Keeps headers aligned to the pill start on desktop */
+
+    .p1 { margin-left: 0px; }
+    .p2 { margin-left: 65px; }
+    .p3 { margin-left: 25px; }
+    .p4 { margin-left: 95px; }
+    .p5 { margin-left: 45px; }
+
+    .p6 { margin-left: 45px; }
+    .p7 { margin-left: 95px; }
+    .p8 { margin-left: 25px; }
+    .p9 { margin-left: 65px; }
+    .p10 { margin-left: 0px; }
+}
+
+/* ========================================= 
+   Intersection Observer State & Staggers
+   ========================================= */
+.show .pill {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.show .p1  { transition-delay: 0.05s; }
+.show .p2  { transition-delay: 0.12s; }
+.show .p3  { transition-delay: 0.19s; }
+.show .p4  { transition-delay: 0.26s; }
+.show .p5  { transition-delay: 0.33s; }
+.show .p6  { transition-delay: 0.40s; }
+.show .p7  { transition-delay: 0.47s; }
+.show .p8  { transition-delay: 0.54s; }
+.show .p9  { transition-delay: 0.61s; }
+.show .p10 { transition-delay: 0.68s; }
+
+/* ========================================= 
+   Central Direction Line Vector
+   ========================================= */
+.center-line {
+    width: 100%;
+    max-width: 160px;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), #C8A75B 50%, rgba(255, 255, 255, 0.1));
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    right: 20%;
+    top: -4px;
+    width: 9px;
+    height: 9px;
+    border-top: 1px solid #C8A75B;
+    border-right: 1px solid #C8A75B;
+    transform: rotate(45deg);
+}
+
+/* ========================================= 
+   Responsive Adaptive Resets
+   ========================================= */
+@media (max-width: 1023px) {
+    .pill {
+        margin-left: 0 !important;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        
+    }
+    
+    h3 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+.pill{
+    opacity:1 !important;
+    transform:none !important;
+}

@@ -1,1 +1,142 @@
-<p>ecosystem-hero works!</p>
+<section class="relative min-h-screen overflow-x-hidden">
+
+    <!-- Background -->
+
+    <img
+        src="/ecosystem-hero.jpg"
+        alt="Lotina Ecosystem"
+        class="absolute inset-0 w-full h-full object-cover">
+
+    <!-- Overlay -->
+
+    <div
+        class="absolute inset-0
+               bg-gradient-to-r
+               from-[#050505]/95
+               via-[#050505]/78
+               to-[#050505]/35">
+    </div>
+
+    <!-- Content -->
+
+    <div
+        class="relative
+               z-10
+               max-w-7xl
+               mx-auto
+               h-full
+               px-8
+               pt-26">
+
+        <div
+            class="grid
+                   lg:grid-cols-5
+                   gap-12
+                   h-full
+                   items-center">
+
+            <!-- LEFT -->
+
+            <div class="lg:col-span-2">
+
+                <p
+                    class="uppercase
+                           tracking-[0.35em]
+                           text-[#C8A75B]
+                           text-sm
+                           font-semibold">
+
+                    The Lotina Ecosystem
+
+                </p>
+
+                <h1
+                    class="mt-6
+                           text-3xl
+                           lg:text-5xl
+                           font-light
+                           leading-tight
+                           text-white">
+
+                    Building Businesses
+                    <br>
+
+                    That Build Africa
+
+                </h1>
+
+                <!-- Divider -->
+
+                <div
+                    class="w-16
+                           h-px
+                           bg-[#C8A75B]/70
+                           my-5">
+                </div>
+
+                <p
+                    class="text-lg
+                           text-gray-300
+                           leading-8
+                           max-w-md">
+
+                    Lotina Investments builds and supports
+                    businesses across technology, mobility,
+                    commerce, logistics and digital infrastructure
+                    to create sustainable growth and long-term
+                    value across Africa.
+
+                </p>
+
+                <button
+                    class="group
+                           mt-8
+                           inline-flex
+                           items-center
+                           gap-4
+                           px-8
+                           py-4
+                           border
+                           border-[#C8A75B]
+                           text-[#C8A75B]
+                           transition
+                           duration-300
+                           hover:bg-[#C8A75B]
+                           hover:text-black">
+
+                    Explore Our Ecosystem
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1">
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M5 12h14m-6-6 6 6-6 6"/>
+
+                    </svg>
+
+                </button>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="lg:col-span-3 flex justify-center">
+               
+
+                <app-ecosystem-hero-diagram></app-ecosystem-hero-diagram>
+
+             
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

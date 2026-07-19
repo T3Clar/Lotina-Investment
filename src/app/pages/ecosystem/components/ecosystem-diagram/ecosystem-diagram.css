@@ -1,0 +1,226 @@
+/* =======================
+   WRAPPER
+======================= */
+
+.diagram-container{
+
+    width:86%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* =======================
+   DIAGRAM
+======================= */
+
+.diagram{
+
+    position:relative;
+
+    width:clamp(340px,42vw,600px);
+
+    aspect-ratio:1;
+
+}
+
+/* =======================
+   GLOW
+======================= */
+
+.diagram-glow{
+
+    position:absolute;
+
+    inset:18%;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(200,167,91,.18),
+    rgba(200,167,91,.05),
+    transparent);
+
+    filter:blur(30px);
+
+}
+
+/* =======================
+   ORBIT
+======================= */
+
+.orbit-ring{
+
+    position:absolute;
+
+    inset:10%;
+
+    border-radius:50%;
+
+    border:1.5px solid rgba(200,167,91,.25);
+
+}
+
+/* =======================
+   CONNECTIONS
+======================= */
+
+.connections{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+}
+
+.connections line{
+
+    stroke:rgba(200,167,91,.25);
+
+    stroke-width:1.4;
+
+    stroke-dasharray:10 10;
+
+    animation:flow 14s linear infinite;
+
+}
+
+@keyframes flow{
+
+    from{
+
+        stroke-dashoffset:0;
+
+    }
+
+    to{
+
+        stroke-dashoffset:-320;
+
+    }
+
+}
+
+/* =======================
+   CENTER
+======================= */
+
+.center-node{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    width:32%;
+
+    aspect-ratio:1;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    #2d2d2d,
+    #111);
+
+    border:1px solid rgba(200,167,91,.30);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:20;
+
+}
+
+.center-node img{
+
+    width:62%;
+
+}
+
+/* =======================
+   COMPANY
+======================= */
+
+.company-node{
+
+    position:absolute;
+
+    width:clamp(90px,9vw,130px);
+
+    aspect-ratio:1;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:#151515;
+
+    border:1px solid rgba(200,167,91,.20);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    transition:.35s;
+
+    z-index:15;
+
+}
+
+.company-node img{
+
+    width:30%;
+
+    margin-bottom:8px;
+
+}
+
+.company-node h3{
+
+    color:white;
+
+    font-size:clamp(.72rem,.9vw,.95rem);
+
+    font-weight:500;
+
+}
+
+/* =======================
+   HOVER
+======================= */
+
+.company-node:hover{
+
+    transform:
+    translate(-50%,-50%)
+    scale(1.08);
+
+    border-color:rgba(200,167,91,.8);
+
+    box-shadow:0 0 24px rgba(200,167,91,.28);
+
+}
