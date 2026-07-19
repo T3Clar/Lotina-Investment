@@ -1,0 +1,50 @@
+<section
+    id="investment-sectors"
+    class="bg-[var(--lotina-black)] py-24">
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-12">
+
+        <div class="text-center">
+
+            <div
+                class="badge badge-outline border-[var(--lotina-border)] bg-black/20 px-6 py-4 uppercase tracking-[0.35em] text-[var(--lotina-gold)]">
+
+                Strategic Investment Areas
+
+            </div>
+
+            <h2
+                class="mt-8 text-4xl font-light text-[var(--lotina-white)] md:text-5xl">
+
+                Investing Across High-Growth Industries
+
+            </h2>
+
+            <p
+                class="mx-auto mt-6 max-w-3xl text-lg leading-9 text-[var(--lotina-grey)]">
+
+                Our portfolio focuses on industries that solve real-world
+                challenges while creating sustainable economic value and
+                long-term opportunities for Africa's future.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Investment Sector Components -->
+
+    <div class="mt-14">
+
+    @for (sector of sectors; track sector.number) {
+
+        <app-investment-sector
+            [sector]="sector">
+        </app-investment-sector>
+
+    }
+
+</div>
+
+</section>

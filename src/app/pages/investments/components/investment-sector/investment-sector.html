@@ -1,0 +1,97 @@
+@if (!sector.reverse) {
+
+<section class="grid min-h-[570px] lg:grid-cols-[55%_45%]">
+
+    <!-- Image -->
+    <div class="relative h-[500px] overflow-hidden">
+        <img
+            [src]="sector.image"
+            [alt]="sector.title"
+            class="h-full w-full object-cover duration-700 hover:scale-105">
+        <div class="absolute inset-0 bg-black/20"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="flex items-start bg-[var(--lotina-graphite)]">
+        <div class="mx-auto max-w-xl px-7  lg:px-13">
+
+            <p class="text-base font-semibold text-[var(--lotina-gold)]">
+                {{ sector.number }}
+            </p>
+
+            <!-- Reduced space above heading by 50% -->
+            <h2 class=" text-3xl lg:text-[2.1rem] font-light uppercase text-[var(--lotina-white)] leading-tight">
+                {{ sector.title }}
+            </h2>
+
+            <div class="mt-5 h-[2px] w-22 bg-[var(--lotina-gold)]"></div>
+
+            <p class="mt-5 leading-7 text-[var(--lotina-grey)] text-sm">
+                {{ sector.description }}
+            </p>
+
+            <div class="mt-4 space-y-3.5">
+                @for(item of sector.items; track item){
+                <div class="group flex items-center justify-between border-b border-[var(--lotina-border)] pb-3.5">
+                    <span class="text-[0.92rem] text-[var(--lotina-silver)] transition duration-300 group-hover:translate-x-2 group-hover:text-[var(--lotina-white)]">
+                        {{ item }}
+                    </span>
+                    <i class="fa-solid fa-arrow-right text-[var(--lotina-gold)] transition duration-300 group-hover:translate-x-2 text-sm"></i>
+                </div>
+                }
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+} @else {
+
+<section class="grid min-h-[570px] lg:grid-cols-[45%_55%]">
+
+    <!-- Content -->
+    <div class="flex items-start bg-[var(--lotina-graphite)]">
+        <div class="mx-auto max-w-xl px-7  lg:px-13">
+
+            <p class="text-base font-semibold text-[var(--lotina-gold)]">
+                {{ sector.number }}
+            </p>
+
+            <!-- Reduced space above heading by 50% -->
+            <h2 class="text-3xl lg:text-[2.1rem] font-light uppercase text-[var(--lotina-white)] leading-tight">
+                {{ sector.title }}
+            </h2>
+
+            <div class="mt-5 h-[2px] w-22 bg-[var(--lotina-gold)]"></div>
+
+            <p class="mt-5 leading-7 text-[var(--lotina-grey)] text-sm">
+                {{ sector.description }}
+            </p>
+
+            <div class="mt-5 space-y-[11px]">
+                @for(item of sector.items; track item){
+                <div class="group flex items-center justify-between border-b border-[var(--lotina-border)] pb-3.5">
+                    <span class="text-[0.92rem] text-[var(--lotina-silver)] transition duration-300 group-hover:translate-x-2 group-hover:text-[var(--lotina-white)]">
+                        {{ item }}
+                    </span>
+                    <i class="fa-solid fa-arrow-right text-[var(--lotina-gold)] transition duration-300 group-hover:translate-x-2 text-sm"></i>
+                </div>
+                }
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Image -->
+    <div class="relative h-[500px] overflow-hidden">
+        <img
+            [src]="sector.image"
+            [alt]="sector.title"
+            class="h-full w-full object-cover duration-700 hover:scale-105">
+        <div class="absolute inset-0 bg-black/20"></div>
+    </div>
+
+</section>
+
+}
