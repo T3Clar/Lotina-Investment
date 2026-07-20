@@ -1,1 +1,172 @@
-<p>future-statement works!</p>
+<section class="bg-[var(--lotina-black)] py-28 border-t border-[#1d1d1d]">
+
+    <div class="mx-auto w-[92%] max-w-7xl text-center">
+
+        <p class="mb-4 text-sm uppercase tracking-[4px] text-[var(--lotina-gold)]">
+
+            Looking Ahead
+
+        </p>
+
+        <h2 class="text-5xl font-light leading-tight text-white">
+
+            Building Today For
+            <br>
+            A Better Tomorrow
+
+        </h2>
+
+        <div class="mx-auto mt-4 mb-4 h-[2px] w-24 bg-[var(--lotina-gold)]"></div>
+
+        <p class="mx-auto max-w-4xl text-lg leading-9 text-[var(--lotina-silver)]">
+
+            Starting in Jinja, building for Uganda, scaling across East Africa,
+            and ultimately helping shape the future of the continent.
+
+        </p>
+
+
+        <!-- Goals -->
+
+        <div class="mt-10 grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-4">
+
+            @for(goal of goals; track goal.title){
+
+            <div class="group">
+
+                <!-- SVG -->
+
+                <div class="mb-8 flex justify-center">
+
+                    @switch(goal.icon){
+
+                    @case ('location') {
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                        class="goal-icon">
+
+                        <path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z" />
+                        <circle cx="12" cy="10" r="2.5" />
+
+                    </svg>
+
+                    }
+                    @case ('globe') {
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                        class="goal-icon">
+
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M3 12h18" />
+                        <path d="M12 3c3 3 3 15 0 18" />
+                        <path d="M12 3c-3 3-3 15 0 18" />
+
+                    </svg>
+
+                    }
+                    @case ('africa') {
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                        class="goal-icon">
+
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M14.8 9.2L9 11l1.8 5.8L15 13l-.2-3.8z" />
+                        <circle cx="12" cy="12" r="1" />
+
+                    </svg>
+
+                    }
+                    @case ('people') {
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                        class="goal-icon">
+
+                        <circle cx="9" cy="8" r="3" />
+                        <circle cx="17" cy="10" r="2.5" />
+
+                        <path d="M3 19c0-3 2.7-5 6-5s6 2 6 5" />
+
+                        <path d="M15 18c.4-2 2-3.5 4.5-3.5 1 0 1.8.2 2.5.6" />
+
+                    </svg>
+
+                    }
+
+                    }
+
+                </div>
+
+                <h3
+                    class="mb-4 text-2xl font-light text-white transition-all duration-300 group-hover:text-[var(--lotina-gold)]">
+
+                    {{ goal.title }}
+
+                </h3>
+
+                <p class="mx-auto max-w-[240px] leading-8 text-[var(--lotina-silver)]">
+
+                    {{ goal.description }}
+
+                </p>
+
+            </div>
+
+            }
+
+
+
+        </div>
+        <!-- CTA -->
+
+<div class="mx-auto mt-24 max-w-3xl">
+
+    <div class="mx-auto mb-8 h-px w-32 bg-gradient-to-r from-transparent via-[var(--lotina-gold)] to-transparent"></div>
+
+    <h3 class="mb-6 text-4xl font-light text-white">
+
+        Ready to Build the Future With Us?
+
+    </h3>
+
+    <p class="mx-auto mb-10 max-w-2xl text-lg leading-9 text-[var(--lotina-silver)]">
+
+        Discover how Lotina Investments is shaping tomorrow through innovation,
+        strategic partnerships, and businesses that create meaningful impact
+        across Africa.
+
+    </p>
+
+    <a
+        routerLink="/ecosystem"
+        class="group inline-flex items-center gap-3 rounded-full border border-[var(--lotina-gold)] px-8 py-4 text-sm font-medium uppercase tracking-[3px] text-[var(--lotina-gold)] transition-all duration-300 hover:bg-[var(--lotina-gold)] hover:text-black">
+
+        Explore Our Ecosystem
+
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="transition-transform duration-300 group-hover:translate-x-1">
+
+            <path d="M5 12h14"/>
+            <path d="M13 5l7 7-7 7"/>
+
+        </svg>
+
+    </a>
+
+</div>
+
+    </div>
+
+</section>

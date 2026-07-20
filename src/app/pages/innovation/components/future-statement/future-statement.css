@@ -1,0 +1,19 @@
+.goal-icon{
+
+    color:#9ca3af;
+    transition:all .35s ease;
+
+}
+
+.group:hover .goal-icon{
+
+    color:var(--lotina-gold);
+    transform:translateY(-6px) scale(1.08);
+
+}
+
+.group{
+
+    transition:.35s;
+
+}

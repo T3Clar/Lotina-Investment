@@ -1,0 +1,35 @@
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem 2rem;
+
+  background: var(--lotina-black);
+
+  border: 1px solid rgba(200, 169, 107, .6);
+
+  color: var(--lotina-white);
+
+  text-decoration: none;
+
+  transition: .3s;
+}
+
+.hero-btn:hover {
+  border-color: var(--lotina-gold);
+
+  color: var(--lotina-gold);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 0 20px rgba(200, 169, 107, .35);
+}
+
+.hero-btn span {
+  transition: .3s;
+}
+
+.hero-btn:hover span {
+  transform: translateX(6px);
+}
