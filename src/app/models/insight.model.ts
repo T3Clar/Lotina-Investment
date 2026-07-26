@@ -16,8 +16,12 @@ export interface InsightCategory {
 
   name: string;
 
+  slug: string;
+
   heroImage: string;
 
   description: string;
+
+  articles: number;
 
 }

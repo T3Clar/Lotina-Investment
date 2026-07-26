@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { InsightService } from '../../../services/insight.service';
 import { Insight } from '../../../models/insight.model';
 import { InsightModal } from '../../../components/insight-modal/insight-modal';
-
+import { InsightCategory } from '../../../models/insight.model';
 @Component({
   selector: 'app-category-insights',
   standalone: true,
@@ -14,6 +14,7 @@ import { InsightModal } from '../../../components/insight-modal/insight-modal';
 })
 export class CategoryInsights implements OnInit {
   category = '';
+  categoryInfo!: InsightCategory;
   showModal = false;
 
 selectedInsight!: Insight;
@@ -88,16 +89,12 @@ get hasNext(): boolean {
     this.route.paramMap.subscribe(params => {
 
       this.category = params.get('category') ?? '';
-      this.insights = 
-      this.insightService.insights.filter(
-        insight => 
-          insight.category.toLowerCase() ===
-        this.category.toLowerCase()
-      );
+      this.categoryInfo = 
+      this.insightService.getCategory(this.category)!;
+        this.insights = 
+          this.insightService.getInsightsByCategory(this.category);
 
     });
 
   }
-  
-
 }

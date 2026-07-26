@@ -84,5 +84,86 @@ export class InsightService {
   }
 
   ];
+ 
+  categories: InsightCategory[] = [
+    {
+      name: 'Technology',
+      slug: 'technology',
+      heroImage: '/technology.jpg',
+      description: 'Artificial intelligence, software engineering, cloud computing and digital transformation.',
+      articles: 1
+    },
+    {
+      name: 'Commerce',
+      slug: 'commerce',
+      heroImage: '/commerce.jpg',
+      description: 'Digital marketplaces, retail innovation and customer experiences.',
+      articles: 2
+    },
+    {
+      name: 'Partnerships',
+      slug: 'partnerships',
+      heroImage: '/partnerships.jpg',
+      description: 'Building strategic collaborations that create long-term value.',
+      articles: 3
+    },
+    {
+      name: 'Investment',
+      slug: 'investment',
+      heroImage: '/investment.jpg',
+      description: 'Capital allocation, venture growth and long-term investment strategies.',
+      articles: 4
+    },
+    {
+      name: 'Innovation',
+      slug: 'innovation',
+      heroImage: '/innovation.jpg',
+      description: 'Emerging ideas shaping the businesses of tomorrow.',
+articles: 5
+    },
+    {
+      name: 'Logistics',
+      slug: 'logistics',
+      heroImage: '/logistics.jpg',
+      description: 'Transportation, supply chains and modern commerce.',
+      articles: 6
+    },
+    {
+      name: 'Markets',
+      slug: 'markets',
+      heroImage: '/markets.jpg',
+      description: 'Economic trends and market intelligence.',
+      articles: 7
+    },
+    {
+      name: 'Research',
+      slug: 'research',
+      heroImage: '/research.jpg',
+      description: 'Industry reports and strategic analysis.',
+      articles: 8
+    },
+    {
+      name: 'Sustainability',
+      slug: 'sustainability',
+      heroImage: '/sustainability.jpg',
+      description: 'Building businesses that create lasting impact.',
+articles: 9
+    }
+  ];
 
+  getInsights(): Insight[] {
+  return this.insights;
+}
+
+getInsightsByCategory(category: string): Insight[] {
+  return this.insights.filter(
+    insight => insight.category.toLowerCase() === category.toLowerCase()
+  );
+}
+
+getCategory(name: string): InsightCategory | undefined {
+  return this.categories.find(
+    category => category.name.toLowerCase() === name.toLowerCase()
+  );
+}
 }

@@ -18,7 +18,7 @@ export class InsightModal {
   }
     @Input() show = false;
 
-  @Input() insight!: Insight;
+  @Input() insight: Insight | null = null;
   @Input() hasPrevious = false;
 
 @Input() hasNext = false;
