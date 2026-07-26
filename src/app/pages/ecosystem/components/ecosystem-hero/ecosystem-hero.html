@@ -22,7 +22,7 @@
     <div
         class="relative
                z-10
-               max-w-7xl
+               w-full
                mx-auto
                h-full
                px-8
@@ -30,14 +30,14 @@
 
         <div
             class="grid
-                   lg:grid-cols-5
-                   gap-12
+                   lg:grid-cols-12
+                   gap-
                    h-full
                    items-center">
 
             <!-- LEFT -->
 
-            <div class="lg:col-span-2">
+            <div class="lg:col-span-4">
 
                 <p
                     class="uppercase
@@ -88,46 +88,11 @@
 
                 </p>
 
-                <button
-                    class="group
-                           mt-8
-                           inline-flex
-                           items-center
-                           gap-4
-                           px-8
-                           py-4
-                           border
-                           border-[#C8A75B]
-                           text-[#C8A75B]
-                           transition
-                           duration-300
-                           hover:bg-[#C8A75B]
-                           hover:text-black">
-
-                    Explore Our Ecosystem
-
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1">
-
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M5 12h14m-6-6 6 6-6 6"/>
-
-                    </svg>
-
-                </button>
-
             </div>
 
             <!-- RIGHT -->
 
-            <div class="lg:col-span-3 flex justify-center">
+            <div class="lg:col-span-8 flex justify-end pr-8">
                
 
                 <app-ecosystem-hero-diagram></app-ecosystem-hero-diagram>

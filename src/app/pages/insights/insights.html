@@ -1,1 +1,23 @@
-<p>insights works!</p>
+<app-insights-hero></app-insights-hero>
+
+<app-featured-insight></app-featured-insight>
+
+<app-investment-perspectives></app-investment-perspectives>
+
+<app-insights-grid
+  (insightSelected)="openInsight($event)">
+</app-insights-grid>
+
+<app-newsletter-banner></app-newsletter-banner>
+
+<app-insights-cta></app-insights-cta>
+
+<app-insight-modal
+  [show]="showModal"
+  [insight]="selectedInsight"
+  [hasPrevious]="hasPrevious"
+  [hasNext]="hasNext"
+  (close)="closeModal()"
+  (previous)="previousInsight()"
+  (next)="nextInsight()">
+</app-insight-modal>

@@ -3,11 +3,6 @@
   [class.scrolled]="isScrolled"
 >
 
-  <!-- Logo -->
-  <a routerLink="/" class="logo">
-    LOTINA
-  </a>
-
   <!-- Desktop Navigation -->
   <div class="desktop-nav">
 
@@ -35,17 +30,13 @@
     </a>
 
     <a routerLink="/insights" routerLinkActive="active-link">
-      Insights
-    </a>
-
-    <a routerLink="/contact" routerLinkActive="active-link">
-      Contact
+      News
     </a>
 
   </div>
 
   <!-- CTA -->
-  <button class="contact-btn">
+  <button routerLink="/contact" class="contact-btn">
     Partner With Us
   </button>
 

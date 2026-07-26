@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 interface FutureGoal {
   icon: string;
@@ -9,7 +10,7 @@ interface FutureGoal {
 @Component({
   selector: 'app-future-statement',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
  templateUrl: './future-statement.html',
   styleUrl: './future-statement.css',
 })

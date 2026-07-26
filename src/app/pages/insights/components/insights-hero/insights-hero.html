@@ -1,1 +1,54 @@
-<p>insights-hero works!</p>
+<section class="hero relative flex min-h-[90vh] items-center">
+
+    <!-- Overlay -->
+
+    <div class="absolute inset-0 bg-black/85"></div>
+
+    <!-- Content -->
+
+    <div class="relative z-10 mx-auto w-[92%] max-w-7xl mt-8">
+
+        <div class="max-w-3xl">
+
+            <!-- Label -->
+
+            <p class=" text-sm font-medium uppercase tracking-[4px] text-[var(--lotina-gold)] mt-5 mb-5">
+
+                {{ hero.label }}
+
+            </p>
+
+            <!-- Heading -->
+
+            <h1 class="mb-4 mt-5 whitespace-pre-line text-4xl font-light leading-tight text-white lg:text-6xl">
+
+                {{ hero.title }}
+
+            </h1>
+
+            <!-- Description -->
+
+            <p class="mb-6 max-w-2xl text-lg leading-9 text-[var(--lotina-silver)]">
+
+                {{ hero.description }}
+
+            </p>
+
+            <!-- Buttons -->
+
+            <div class=" mb-5 ">
+
+                <a (click)="goToNewletter()" fragment="newsletter"
+                    class="rounded-lg border border-white/30 bg-white/5 px-8 py-4 text-sm font-medium uppercase tracking-[2px] text-white backdrop-blur-sm transition-all duration-300 hover:border-[var(--lotina-gold)] hover:text-[var(--lotina-gold)]">
+
+                    {{ hero.secondaryButton }}
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
 
+interface Company{
+  name: string;
+  description: string;
+  image: string;
+  website: string; 
+}
+
 @Component({
   selector: 'app-business-synergies',
   imports: [],
@@ -7,42 +14,48 @@ import { Component } from '@angular/core';
   styleUrl: './business-synergies.css',
 })
 export class BusinessSynergies {
-   companies = [
+   companies: Company[] = [
 
     {
-      name: 'Techlar',
+      name: 'T3clar',
       description: 'Enterprise Software Solutions',
-      image: '/t3.png'
+      image: '/t3.png',
+      website: 'https://t3clar.web.app/websites'
     },
 
     {
-      name: 'Easy Duka',
+      name: 'EasyDuuka',
       description: 'Retail Digitalisation',
-      image: '/ed.png'
+      image: '/ed.png',
+      website: 'https://easyduuka.com/'
     },
 
     {
       name: 'Xride',
       description: 'Smart Mobility',
-      image: '/xr.png'
+      image: '/xr.png',
+      website: '/'
     },
 
     {
-      name: 'Shoply',
+      name: 'Shoplt',
       description: 'Digital Commerce',
-      image: '/sho.png'
+      image: '/sho.png',
+      website: '/'
     },
 
     {
       name: 'Clexarly',
       description: 'Learning Technology',
-      image: '/cl.png'
+      image: '/cl.png',
+      website: 'https://clexarly.com/'
     },
 
     {
       name: 'Fork & Go',
       description: 'Food Delivery Platform',
-      image: '/fo.png'
+      image: '/fo.png',
+      website: 'https://forkandgoexpress.com/'
     }
 
   ];

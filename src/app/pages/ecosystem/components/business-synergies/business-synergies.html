@@ -6,15 +6,13 @@
 
         <div class="text-center max-w-3xl mx-auto">
 
-            <p
-                class="uppercase tracking-[0.35em] text-[#f8af06] text-sm">
+            <p class="uppercase tracking-[0.35em] text-[#f8af06] text-sm">
 
                 Our Portfolio
 
             </p>
 
-            <h2
-                class="mt-5 text-5xl font-light text-black">
+            <h2 class="mt-5 text-5xl font-light text-black">
 
                 Meet the Companies
                 <br>
@@ -22,13 +20,12 @@
 
             </h2>
 
-           
+
         </div>
 
         <!-- Cards -->
 
-        <div
-            class="grid
+        <div class="grid
                    lg:grid-cols-3
                    md:grid-cols-2
                    gap-8
@@ -36,9 +33,9 @@
 
             @for(company of companies; track company.name){
 
-            <div
-                class="group
+            <a [href]="company.website" target="_blank" rel="noopener noreferrer" class="group
                        relative
+                       block
                        h-[420px]
                        rounded-3xl
                        overflow-hidden
@@ -46,10 +43,7 @@
 
                 <!-- Background -->
 
-                <img
-                    [src]="company.image"
-                    [alt]="company.name"
-                    class="absolute inset-0
+                <img [src]="company.image" [alt]="company.name" class="absolute inset-0
                            w-full
                            h-full
                            
@@ -59,8 +53,7 @@
 
                 <!-- Overlay -->
 
-                <div
-                    class="absolute inset-0
+                <div class="absolute inset-0
                            bg-gradient-to-t
                            from-black
                            via-black/55
@@ -71,17 +64,15 @@
 
                 <!-- Content -->
 
-                <div
-                    class="relative
+                <div class="relative
                            h-full
                            flex
                            flex-col
                            justify-end
                            p-8">
 
-                    
-                    <h3
-                        class="text-3xl
+
+                    <h3 class="text-3xl
                                text-white
                                font-light">
 
@@ -89,8 +80,7 @@
 
                     </h3>
 
-                    <p
-                        class="text-gray-300
+                    <p class="text-gray-300
                                mt-3
                                leading-7">
 
@@ -98,8 +88,7 @@
 
                     </p>
 
-                    <div
-                        class="mt-8
+                    <div class="mt-8
                                flex
                                items-center
                                gap-3
@@ -113,26 +102,18 @@
 
                         <span>Explore</span>
 
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="w-5 h-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
 
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M5 12h14m-6-6 6 6-6 6"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 12h14m-6-6 6 6-6 6" />
 
                         </svg>
 
                     </div>
 
                 </div>
-
-            </div>
+            </a>
 
             }
 

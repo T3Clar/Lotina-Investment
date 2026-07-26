@@ -1,0 +1,155 @@
+@if(show){
+
+<div class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-md p-4"
+    (click)="closeModal()">
+
+    <!-- Modal -->
+
+    <div class="relative flex h-[95vh] w-full max-w-6xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl"
+        (click)="$event.stopPropagation()">
+
+        <!-- Close Button -->
+
+        <button (click)="closeModal()"
+            class="absolute right-6 top-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-black/70 text-white transition hover:bg-black">
+
+            ✕
+
+        </button>
+
+        <!-- Scrollable Content -->
+
+        <div class="overflow-y-auto">
+
+            <!-- Hero Image -->
+
+            <div class="relative h-[420px] w-full">
+
+                <img [src]="insight.image" [alt]="insight.title" class="h-full w-full object-cover">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent">
+
+                </div>
+
+                <!-- Hero Content -->
+
+                <div class="absolute bottom-0 left-0 w-full p-10 text-white">
+
+                    <span
+                        class="rounded-full bg-[var(--lotina-gold)] px-4 py-2 text-xs font-semibold uppercase tracking-[2px] text-black">
+
+                        {{ insight.category }}
+
+                    </span>
+
+                    <h1 class="mt-6 max-w-4xl text-5xl font-bold leading-tight">
+
+                        {{ insight.title }}
+
+                    </h1>
+
+                    <div class="mt-6 flex flex-wrap items-center gap-6 text-sm text-white/80">
+
+                        <span>{{ insight.author }}</span>
+
+                        <span>•</span>
+
+                        <span>{{ insight.date }}</span>
+
+                        <span>•</span>
+
+                        <span>{{ insight.readTime }}</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Article -->
+
+            <div class="mx-auto max-w-4xl px-8 py-14">
+
+                <p class="mb-10 text-xl leading-9 text-neutral-600">
+
+                    {{ insight.excerpt }}
+
+                </p>
+
+                <div class="prose prose-lg max-w-none" [innerHTML]="insight.content">
+
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+
+            <div class="border-t border-neutral-200 bg-neutral-50 px-10 py-8">
+
+                <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+
+                    <!-- Share -->
+
+                    <div>
+
+                        <h3 class="mb-3 text-sm font-semibold uppercase tracking-[2px] text-neutral-500">
+
+                            Share Insight
+
+                        </h3>
+
+                        <div class="flex gap-3">
+
+                            <button class="rounded-xl border px-5 py-2 transition hover:bg-neutral-100">
+
+                                LinkedIn
+
+                            </button>
+
+                            <button class="rounded-xl border px-5 py-2 transition hover:bg-neutral-100">
+
+                                X
+
+                            </button>
+
+                            <button class="rounded-xl border px-5 py-2 transition hover:bg-neutral-100">
+
+                                Copy Link
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Navigation -->
+
+                    <div class="mt-12 flex items-center justify-between border-t border-neutral-200 pt-6">
+
+                        <button type="button" (click)="previousInsight()" [disabled]="!hasPrevious"
+                            class="group flex items-center gap-2 rounded-full border border-neutral-300 px-5 py-3 transition disabled:cursor-not-allowed disabled:opacity-40 hover:border-[var(--lotina-gold)] hover:text-[var(--lotina-gold)]">
+
+                            ← Previous
+
+                        </button>
+
+                        <button type="button" (click)="nextInsight()" [disabled]="!hasNext"
+                            class="group flex items-center gap-2 rounded-full bg-[var(--lotina-black)] px-5 py-3 text-white transition disabled:cursor-not-allowed disabled:opacity-40 hover:bg-[var(--lotina-gold)]">
+
+                            Next →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+}

@@ -1,0 +1,122 @@
+<section class="bg-[#090909] py-28">
+
+    <div class="mx-auto w-[92%] max-w-7xl">
+
+        <!-- Header -->
+
+        <div class="mx-auto mb-20 max-w-3xl text-center">
+
+            <p
+                class="mb-4 text-sm uppercase tracking-[4px] text-[var(--lotina-gold)]">
+
+                Explore Our Thinking
+
+            </p>
+
+            <h2
+                class="mb-6 text-5xl font-light text-white">
+
+                Discover Insights
+                Across Every Sector
+
+            </h2>
+
+            <p
+                class="leading-9 text-[var(--lotina-silver)]">
+
+                Explore the ideas, research, innovation and market perspectives
+                driving the future of Lotina Investments and the businesses
+                we continue to build.
+
+            </p>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div
+            class="grid gap-8 md:grid-cols-2">
+
+            @for(category of categories; track category.slug){
+
+            <a
+                [routerLink]="['/insights/category', category.slug]"
+                class="group relative h-[340px] overflow-hidden rounded-3xl">
+
+                <!-- Background -->
+
+                <img
+                    [src]="category.image"
+                    [alt]="category.title"
+                    class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+                <!-- Overlay -->
+
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent transition duration-500 group-hover:from-black/90">
+                </div>
+
+                <!-- Content -->
+
+                <div
+                    class="absolute inset-0 flex flex-col justify-end p-10">
+
+                    <p
+                        class="mb-2 text-sm uppercase tracking-[3px] text-[var(--lotina-gold)]">
+
+                        {{category.articles}} Articles
+
+                    </p>
+
+                    <h3
+                        class="mb-3 text-4xl font-light text-white transition-transform duration-500 group-hover:-translate-y-1">
+
+                        {{category.title}}
+
+                    </h3>
+
+                    <p
+                        class="max-w-md leading-8 text-[var(--lotina-silver)]">
+
+                        {{category.description}}
+
+                    </p>
+
+                    <!-- Arrow -->
+
+                    <div
+                        class="mt-8 flex items-center gap-3 text-[var(--lotina-gold)] transition-all duration-500 group-hover:translate-x-3">
+
+                        <span
+                            class="uppercase tracking-[3px] text-sm">
+
+                            Explore
+
+                        </span>
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2">
+
+                            <path d="M5 12h14"/>
+                            <path d="M13 5l7 7-7 7"/>
+
+                        </svg>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+            }
+
+        </div>
+
+    </div>
+
+</section>

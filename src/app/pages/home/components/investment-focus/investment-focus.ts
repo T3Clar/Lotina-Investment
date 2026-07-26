@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-investment-focus',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './investment-focus.html',
   styleUrl: './investment-focus.css',
 })

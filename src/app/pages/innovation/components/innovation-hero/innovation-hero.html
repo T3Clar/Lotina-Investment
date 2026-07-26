@@ -1,77 +1,79 @@
 <section
-  class="relative flex min-h-[90vh] items-center overflow-hidden border-b border-white/10 bg-[var(--lotina-black)]">
+  class="relative flex h-[100vh] items-center overflow-hidden border-b border-white/10 bg-[var(--lotina-black)]">
 
-  <!-- Overlay -->
-  <div
-    class="absolute inset-0 bg-gradient-to-r from-[rgba(7,7,8,.95)] via-[rgba(7,7,8,.70)] to-[rgba(7,7,8,.25)]">
+  <!-- Background Image -->
+
+  <div class="absolute inset-0">
+
+    <img src="/heee.png" alt="Lotina Insights" class="h-[600px] w-full  object-center mt-6">
+
   </div>
 
+  <!-- Soft Dark Overlay -->
+
+  <div class="absolute inset-0 bg-black/15">
+  </div>
+
+  <!-- Lighter Gradient Overlay -->
+
+  <div class="absolute inset-0 bg-gradient-to-r from-[rgba(7,7,8,.86)] via-[rgba(7,7,8,.75)] to-[rgba(7,7,8,.40)]">
+  </div>
+
+
+  <!-- Gold Glow -->
+
   <div
-    class="relative z-10 mx-auto grid w-[92%] max-w-[1400px] grid-cols-1 items-center gap-20 py-20 lg:grid-cols-2">
+    class="absolute left-0 top-1/2 h-[600px] w-[600px] -translate-y-1/2 rounded-full bg-[var(--lotina-gold)]/10 blur-[150px]">
+  </div>
 
-    <!-- LEFT -->
+  <!-- Content -->
 
-    <div class="space-y-8">
+  <div class="relative z-10 mx-auto w-[92%] max-w-7xl py-16 lg:py-20">
 
-      <p
-        class="text-sm font-medium uppercase tracking-[4px] text-[var(--lotina-gold)]">
+    <div class="max-w-3xl">
+
+      <p class="mt-10 mb-4 text-sm font-medium uppercase tracking-[4px] text-[var(--lotina-gold)]">
 
         LOTINA INSIGHTS
 
       </p>
 
-      <h1
-        class="font-serif text-3xl leading-tight text-[var(--lotina-white)] md:text-6xl">
+      <h1 class="font-serif text-3xl leading-tight text-[var(--lotina-white)] md:text-5xl lg:text-6xl">
 
-        Biulding Afirca's Next Generation of Digital Businesses
+        Building Africa's Next Generation
+        <br>
+        of Digital Businesses
 
       </h1>
 
-      <div
-        class="h-[3px] w-24 bg-[var(--lotina-gold)]">
+      <div class="mt-3 h-[1px] w-24 bg-[var(--lotina-gold)]">
       </div>
 
-      <p
-        class="max-w-xl text-lg leading-9 text-[var(--lotina-silver)]">
+      <p class="mt-5 max-w-2xl text-lg leading-9 text-[var(--lotina-silver)]">
 
-        Through Innovation, technology and bold ideas, we are builing the future of industries, empowering communities and shaping a smarter, more connected Africa.
+        Through innovation, technology, and bold ideas, we are building
+        the future of industries, empowering communities, and shaping
+        a smarter, more connected Africa.
 
       </p>
 
-      <div class="flex flex-wrap gap-6">
+      <div class="mt-7 flex flex-wrap gap-5">
 
-        <a
-          routerLink="/news"
-          class="hero-btn">
+        <a routerLink="/insights/all"
+          class="rounded-full bg-[var(--lotina-gold)] px-8 py-4 text-sm font-medium uppercase tracking-[3px] text-black transition-all duration-300 hover:scale-105">
 
-          Explore News
-
-          <span>→</span>
+          Explore Insights
 
         </a>
 
-        <a
-          routerLink="/contact"
-          class="hero-btn">
+        <a routerLink="/about"
+          class="rounded-full border border-white/20 px-8 py-4 text-sm font-medium uppercase tracking-[3px] text-white transition-all duration-300 hover:border-[var(--lotina-gold)] hover:text-[var(--lotina-gold)]">
 
-          Media Kit
-
-          <span>→</span>
+          Learn More
 
         </a>
 
       </div>
-
-    </div>
-
-    <!-- RIGHT -->
-
-    <div class="flex justify-center lg:justify-end">
-
-      <img
-        src="assets/images/news/news-hero.png"
-        alt="News Hero"
-        class="w-full max-w-3xl rounded-xl object-cover shadow-2xl">
 
     </div>
 

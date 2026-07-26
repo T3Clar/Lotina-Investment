@@ -1,0 +1,230 @@
+<section class="bg-white">
+
+    <!-- ========================= -->
+    <!-- Hero -->
+    <!-- ========================= -->
+
+    <section class="relative h-[55vh] min-h-[480px] overflow-hidden">
+
+        <!-- Background Image -->
+
+        <img
+            src="/technology.jpg"
+            alt="{{ category }}"
+            class="absolute inset-0 h-full w-full object-cover object-center">
+
+        <!-- Overlay -->
+
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/40">
+        </div>
+
+        <!-- Hero Content -->
+
+        <div class="relative mx-auto flex h-full w-[92%] max-w-7xl items-center">
+
+            <div class="max-w-3xl">
+
+                <a
+                    routerLink="/insights"
+                    class="mb-8 inline-flex items-center gap-2 text-sm uppercase tracking-[3px] text-[var(--lotina-gold)] transition hover:translate-x-1">
+
+                    ← Back to Insights
+
+                </a>
+
+                <p
+                    class="mb-4 uppercase tracking-[4px] text-sm text-[var(--lotina-gold)]">
+
+                    Knowledge Area
+
+                </p>
+
+                <h1
+                    class="mb-6 text-5xl font-light capitalize text-white lg:text-6xl">
+
+                    {{ category }}
+
+                </h1>
+
+                <p
+                    class="max-w-2xl text-lg leading-9 text-gray-200">
+
+                    Explore our latest research, market perspectives,
+                    innovation stories and expert insights related to
+                    {{ category }}.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Articles -->
+    <!-- ========================= -->
+
+    <section class="py-24">
+
+        <div class="mx-auto w-[92%] max-w-7xl">
+
+            <!-- Heading -->
+
+            <div
+                class="mb-16 flex flex-col justify-between gap-6 border-b border-gray-200 pb-8 lg:flex-row lg:items-end">
+
+                <div>
+
+                    <p
+                        class="mb-3 uppercase tracking-[3px] text-sm text-[var(--lotina-gold)]">
+
+                        Latest Articles
+
+                    </p>
+
+                    <h2
+                        class="text-4xl font-light text-[var(--lotina-black)]">
+
+                        Insights & Perspectives
+
+                    </h2>
+
+                </div>
+
+                <div
+                    class="rounded-full bg-gray-100 px-5 py-3 text-sm text-gray-600">
+
+                    {{ insights.length }} Articles
+
+                </div>
+
+            </div>
+
+            <!-- Articles -->
+
+            <div
+                *ngIf="insights.length > 0; else noInsights"
+                class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+
+                <article
+                    *ngFor="let insight of insights"
+                    class="group cursor-pointer overflow-hidden rounded-3xl border border-gray-200 bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+
+                    <!-- Image -->
+
+                    <div class="overflow-hidden">
+
+                        <img
+                            [src]="insight.image"
+                            [alt]="insight.title"
+                            class="h-64 w-full object-cover transition duration-700 group-hover:scale-110">
+
+                    </div>
+
+                    <!-- Content -->
+
+                    <div class="p-8">
+
+                        <p
+                            class="mb-3 uppercase tracking-[3px] text-xs text-[var(--lotina-gold)]">
+
+                            {{ insight.category }}
+
+                        </p>
+
+                        <h3
+                            class="mb-4 text-2xl font-semibold leading-snug text-gray-900">
+
+                            {{ insight.title }}
+
+                        </h3>
+
+                        <p
+                            class="mb-6 leading-8 text-gray-600 line-clamp-3">
+
+                            {{ insight.excerpt }}
+
+                        </p>
+
+                        <div
+                            class="mb-8 flex items-center gap-3 text-sm text-gray-500">
+
+                            <span>{{ insight.date }}</span>
+
+                            <span>•</span>
+
+                            <span>{{ insight.readTime }}</span>
+
+                        </div>
+
+                        <button
+                            (click)="openInsight(insight)"
+                            class="group inline-flex items-center gap-3 font-semibold uppercase tracking-[3px] text-[var(--lotina-gold)]">
+
+                            Read Insight
+
+                            <span
+                                class="transition-transform duration-300 group-hover:translate-x-1">
+
+                                →
+
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <!-- Empty -->
+
+            <ng-template #noInsights>
+
+                <div
+                    class="rounded-3xl border border-dashed border-gray-300 bg-gray-50 p-20 text-center">
+
+                    <h2
+                        class="mb-5 text-3xl font-light">
+
+                        No Articles Available
+
+                    </h2>
+
+                    <p
+                        class="mx-auto max-w-2xl leading-8 text-gray-600">
+
+                        We're currently preparing new research,
+                        market analysis and expert perspectives
+                        for the <strong>{{ category }}</strong> category.
+
+                        Please check back soon.
+
+                    </p>
+
+                </div>
+
+            </ng-template>
+
+        </div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Modal -->
+    <!-- ========================= -->
+
+    <app-insight-modal
+        [show]="showModal"
+        [insight]="selectedInsight"
+        [hasPrevious]="hasPrevious"
+        [hasNext]="hasNext"
+        (close)="closeModal()"
+        (previous)="previousInsight()"
+        (next)="nextInsight()">
+    </app-insight-modal>
+
+</section>

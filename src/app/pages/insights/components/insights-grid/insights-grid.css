@@ -1,0 +1,33 @@
+article{
+
+    transition:all .35s ease;
+
+}
+
+article:hover{
+
+    border-color:var(--lotina-gold);
+
+}
+
+article img{
+
+    transition:transform .8s ease;
+
+}
+
+article:hover img{
+
+    transform:scale(1.08);
+
+}
+
+article a{
+
+    transition:all .3s ease;
+
+}
+.insight-meta-icon{
+    color: var(--lotina-gold);
+    flex-shrink: 0;
+}

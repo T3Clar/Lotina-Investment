@@ -1,0 +1,14 @@
+:host{
+    display:block;
+}
+
+.hero{
+
+background-image: url('/newshero.png');
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}

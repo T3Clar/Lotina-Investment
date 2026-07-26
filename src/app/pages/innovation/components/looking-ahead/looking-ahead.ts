@@ -11,10 +11,9 @@ import { RouterLink } from '@angular/router';
 export class LookingAhead {
   pillars: string[] = [
      'Digital Payments & Fintech',
-    'Smart Agriculture',
+    'Smart Agriculture & Renewable Energy',
     'Health Technology',
-    'Renewable Energy',
     'Touirism & Hospitality',
-    'Smart Logistics'
+    
   ]
 }

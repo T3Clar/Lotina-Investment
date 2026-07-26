@@ -1,18 +1,18 @@
 @if (!sector.reverse) {
 
-<section class="grid min-h-[570px] lg:grid-cols-[55%_45%]">
+<section class="grid min-h-[470px] lg:grid-cols-[55%_45%]">
 
     <!-- Image -->
-    <div class="relative h-[500px] overflow-hidden">
+    <div class="relative h-[470px] overflow-hidden">
         <img
             [src]="sector.image"
             [alt]="sector.title"
-            class="h-full w-full object-cover duration-700 hover:scale-105">
+            class="h-[470px] w-full object-cover duration-700 hover:scale-105">
         <div class="absolute inset-0 bg-black/20"></div>
     </div>
 
     <!-- Content -->
-    <div class="flex items-start bg-[var(--lotina-graphite)]">
+    <div class="flex  h-[470px] items-start bg-[var(--lotina-graphite)]">
         <div class="mx-auto max-w-xl px-7  lg:px-13">
 
             <p class="text-base font-semibold text-[var(--lotina-gold)]">
@@ -30,7 +30,7 @@
                 {{ sector.description }}
             </p>
 
-            <div class="mt-4 space-y-3.5">
+            <div class="mt-4 space-y-8.5">
                 @for(item of sector.items; track item){
                 <div class="group flex items-center justify-between border-b border-[var(--lotina-border)] pb-3.5">
                     <span class="text-[0.92rem] text-[var(--lotina-silver)] transition duration-300 group-hover:translate-x-2 group-hover:text-[var(--lotina-white)]">
@@ -48,10 +48,10 @@
 
 } @else {
 
-<section class="grid min-h-[570px] lg:grid-cols-[45%_55%]">
+<section class="grid min-h-[470px] lg:grid-cols-[45%_55%]">
 
     <!-- Content -->
-    <div class="flex items-start bg-[var(--lotina-graphite)]">
+    <div class="flex h-[470px] items-start bg-[var(--lotina-graphite)]">
         <div class="mx-auto max-w-xl px-7  lg:px-13">
 
             <p class="text-base font-semibold text-[var(--lotina-gold)]">
@@ -69,7 +69,7 @@
                 {{ sector.description }}
             </p>
 
-            <div class="mt-5 space-y-[11px]">
+            <div class="mt-4 space-y-8.5">
                 @for(item of sector.items; track item){
                 <div class="group flex items-center justify-between border-b border-[var(--lotina-border)] pb-3.5">
                     <span class="text-[0.92rem] text-[var(--lotina-silver)] transition duration-300 group-hover:translate-x-2 group-hover:text-[var(--lotina-white)]">
@@ -84,11 +84,11 @@
     </div>
 
     <!-- Image -->
-    <div class="relative h-[500px] overflow-hidden">
+    <div class="relative h-[470px] overflow-hidden">
         <img
             [src]="sector.image"
             [alt]="sector.title"
-            class="h-full w-full object-cover duration-700 hover:scale-105">
+            class="h-[470px] w-full object-cover duration-700 hover:scale-105">
         <div class="absolute inset-0 bg-black/20"></div>
     </div>
 

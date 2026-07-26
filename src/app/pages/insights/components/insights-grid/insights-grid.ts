@@ -1,9 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { Insight } from '../../../../models/insight.model';
+import { InsightService } from '../../../../services/insight.service';
+import { Insights } from '../../insights';
+
 
 @Component({
   selector: 'app-insights-grid',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './insights-grid.html',
   styleUrl: './insights-grid.css',
 })
-export class InsightsGrid {}
+export class InsightsGrid {
+  @Output() insightSelected = new EventEmitter<Insight>();
+  
+  sectionTitle = 'Latest Insights';
+  constructor(private insightService: InsightService) {}
+  get Insights(): Insight[] {
+    return this.insightService.insights;
+  }
+   openInsight(insight: Insight): void {
+    this.insightSelected.emit(insight);
+   }
+}

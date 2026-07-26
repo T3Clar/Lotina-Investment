@@ -1,1 +1,128 @@
-<p>insights-grid works!</p>
+<section class="bg-white py-20">
+
+    <div class="mx-auto w-[92%] max-w-7xl">
+
+        <!-- Heading -->
+
+        <div class="mb-7 flex items-center justify-between">
+
+            <h2 class="text-3xl font-light text-[var(--lotina-black)]">
+
+                {{ sectionTitle }}
+
+            </h2>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div class="grid gap-10 lg:grid-cols-3">
+
+            @for(insight of Insights; track insight.title){
+
+            <article
+                class="group overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+                <!-- Image -->
+
+                <div class="overflow-hidden">
+
+                    <img [src]="insight.image" [alt]="insight.title"
+                        class="h-60 w-full object-cover transition duration-700 group-hover:scale-105">
+
+                </div>
+
+                <!-- Content -->
+
+                <div class="p-5">
+
+                    <p class=" text-xs font-medium uppercase tracking-[3px] text-[var(--lotina-gold)]">
+
+                        {{ insight.category }}
+
+                    </p>
+
+                    <h3 class=" text-2xl text-semibold font-light leading-tight text-[var(--lotina-black)]">
+
+                        {{ insight.title }}
+
+                    </h3>
+
+                    <p class=" leading-8 text-neutral-600">
+
+                        {{ insight.excerpt }}
+
+                    </p>
+
+                    <div class="flex items-center justify-between border-t border-neutral-200 pt-5">
+
+                        <div class="flex items-center gap-6 text-sm text-neutral-500">
+                            <div class="flex items-center gap-2">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.8" class="insight-meta-icon">
+
+                                    <path d="M8 2v4" />
+                                    <path d="M16 2v4" />
+                                    <rect x="3" y="4" width="18" height="17" rx="2" />
+                                    <path d="M3 10h18" />
+
+                                </svg>
+
+                                <span>{{ insight.date }}</span>
+
+                            </div>
+                            <div class="flex items-center gap-2">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.8" class="insight-meta-icon">
+
+                                    <circle cx="12" cy="12" r="9" />
+                                    <path d="M12 7v5l3 2" />
+
+                                </svg>
+
+                                <span>{{ insight.readTime }}</span>
+
+                            </div>
+
+                        </div>
+                        <button type="button" (click)="openInsight(insight)"
+                            class="text-[var(--lotina-gold)] transition group-hover:translate-x-1">
+
+                            →
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            }
+
+        </div>
+        <div class="mt-14 flex justify-center">
+
+            <a routerLink="/insights/all"
+                class="group inline-flex items-center gap-3 rounded-full border border-[var(--lotina-gold)] px-8 py-4 text-sm font-medium uppercase tracking-[2px] text-[var(--lotina-gold)] transition-all duration-300 hover:bg-[var(--lotina-gold)] hover:text-white">
+
+                View All Insights
+
+                <svg class="transition-transform duration-300 group-hover:translate-x-1"
+                    xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor"
+                    stroke-width="2">
+
+                    <path d="M5 12h14" />
+                    <path d="M13 5l7 7-7 7" />
+
+                </svg>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>

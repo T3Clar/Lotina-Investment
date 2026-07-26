@@ -21,28 +21,28 @@ export class EcosystemHeroDiagramComponent implements OnInit {
 
   companies: Company[] = [
     {
-      name: 'Techlar',
-      logo: '/logos/techlar.png'
+      name: 'T3clar',
+      logo: '/t33.png'
     },
     {
-      name: 'Easy Duka',
-      logo: '/logos/easyduka.png'
+      name: 'EasyDuuka',
+      logo: '/easyd.png'
     },
     {
       name: 'Xride',
-      logo: '/logos/xride.png'
+      logo: '/xrrr.png'
     },
     {
       name: 'Fork & Go',
-      logo: '/logos/forkandgo.png'
+      logo: '/fff.png'
     },
     {
       name: 'Clexarly',
-      logo: '/logos/clexarly.png'
+      logo: '/clexarlyLogo.png'
     },
     {
-      name: 'Shoply',
-      logo: '/logos/shoply.png'
+      name: 'Shoplt',
+      logo: '/shp.png'
     }
   ];
 
@@ -63,9 +63,9 @@ export class EcosystemHeroDiagramComponent implements OnInit {
 
         ...company,
 
-        x: 50 + this.radius * Math.cos(angle),
+        x: 51 + this.radius * Math.cos(angle),
 
-        y: 50 + this.radius * Math.sin(angle)
+        y: 51 + this.radius * Math.sin(angle)
 
       };
 

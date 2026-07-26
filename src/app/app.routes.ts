@@ -49,7 +49,18 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/contact/contact').then(m => m.Contact)
   },
-
+{
+    path: 'insights/all',
+    loadComponent: () =>
+        import('./pages/insights/all-insights/all-insights')
+        .then(m => m.AllInsights)
+}, 
+{
+    path: 'insights/category/:category',
+    loadComponent: () =>
+        import('./pages/insights/category-insights/category-insights')
+        .then(m => m.CategoryInsights)
+},
   {
     path: '**',
     redirectTo: ''
