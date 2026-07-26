@@ -1,17 +1,27 @@
-/* Overlay Animation */
+/* =========================================================
+   INSIGHT MODAL
+   ========================================================= */
 
 :host {
-    animation: fadeIn .25s ease;
     display: block;
+    animation: fadeIn .25s ease;
 }
 
-/* Modal Animation */
+/* =========================================================
+   MODAL
+   ========================================================= */
 
-.relative {
-    animation: modalUp .35s ease;
+.modal-overlay {
+    animation: fadeIn .3s ease;
 }
 
-/* Scrollbar */
+.modal-card {
+    animation: slideUp .35s ease;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -22,70 +32,209 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #bdbdbd;
+    background: #c6c6c6;
     border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #8a8a8a;
+    background: #999;
 }
 
-/* Article */
+/* =========================================================
+   ARTICLE CONTENT
+   IMPORTANT:
+   HTML rendered with [innerHTML] requires ::ng-deep
+   ========================================================= */
 
-.prose h2 {
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #111827;
-}
+:host ::ng-deep .article-content {
 
-.prose h3 {
-    margin-top: 2rem;
-    margin-bottom: .75rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
-}
-
-.prose p {
-    margin-bottom: 1.5rem;
+    color: #374151;
     font-size: 1.12rem;
     line-height: 2rem;
-    color: #525252;
+
 }
 
-.prose img {
-    width: 100%;
-    margin: 2rem 0;
-    border-radius: 18px;
-}
+/* Headings */
 
-.prose ul {
-    margin: 1.5rem 0;
-    padding-left: 1.5rem;
-}
+:host ::ng-deep .article-content h2 {
 
-.prose li {
-    margin-bottom: .75rem;
-}
-
-.prose blockquote {
-    margin: 2.5rem 0;
-    padding: 1.5rem 2rem;
-    border-left: 5px solid var(--lotina-gold);
-    background: #fafafa;
-    font-style: italic;
-    font-size: 1.25rem;
-    color: #444;
-    border-radius: 12px;
-}
-
-.prose strong {
+    margin: 3rem 0 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
     color: #111827;
+
 }
 
-/* Animations */
+:host ::ng-deep .article-content h3 {
+
+    margin: 2.5rem 0 .75rem;
+    font-size: 1.55rem;
+    font-weight: 600;
+    color: #1f2937;
+
+}
+
+:host ::ng-deep .article-content h4 {
+
+    margin: 2rem 0 .75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #374151;
+
+}
+
+/* Paragraphs */
+
+:host ::ng-deep .article-content p {
+
+    margin-bottom: 1.6rem;
+    color: #4b5563;
+    line-height: 2rem;
+    font-size: 1.1rem;
+
+}
+
+/* Strong */
+
+:host ::ng-deep .article-content strong {
+
+    color: #111827;
+    font-weight: 700;
+
+}
+
+/* Links */
+
+:host ::ng-deep .article-content a {
+
+    color: var(--lotina-gold);
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+:host ::ng-deep .article-content a:hover {
+
+    text-decoration: underline;
+
+}
+
+/* Lists */
+
+:host ::ng-deep .article-content ul,
+:host ::ng-deep .article-content ol {
+
+    margin: 1.5rem 0;
+    padding-left: 1.8rem;
+
+}
+
+:host ::ng-deep .article-content li {
+
+    margin-bottom: .85rem;
+    color: #4b5563;
+
+}
+
+/* Images */
+
+:host ::ng-deep .article-content img {
+
+    width: 100%;
+    margin: 2.5rem 0;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 20px 45px rgba(0,0,0,.08);
+
+}
+
+/* Blockquotes */
+
+:host ::ng-deep .article-content blockquote {
+
+    margin: 2.5rem 0;
+    padding: 1.75rem 2rem;
+
+    border-left: 5px solid var(--lotina-gold);
+
+    background: linear-gradient(
+        135deg,
+        #fafafa,
+        #f4f4f4
+    );
+
+    border-radius: 12px;
+
+    font-size: 1.2rem;
+    line-height: 1.9;
+
+    color: #374151;
+    font-style: italic;
+
+}
+
+/* Code */
+
+:host ::ng-deep .article-content code {
+
+    background: #f3f4f6;
+    padding: .2rem .45rem;
+    border-radius: 6px;
+    font-size: .95rem;
+
+}
+
+:host ::ng-deep .article-content pre {
+
+    background: #111827;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 14px;
+    overflow-x: auto;
+    margin: 2rem 0;
+
+}
+
+/* Tables */
+
+:host ::ng-deep .article-content table {
+
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+
+}
+
+:host ::ng-deep .article-content th {
+
+    background: #111827;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+
+}
+
+:host ::ng-deep .article-content td {
+
+    border: 1px solid #e5e7eb;
+    padding: 1rem;
+
+}
+
+/* Horizontal rule */
+
+:host ::ng-deep .article-content hr {
+
+    margin: 3rem 0;
+    border: none;
+    border-top: 1px solid #e5e7eb;
+
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
 
 @keyframes fadeIn {
 
@@ -97,65 +246,56 @@
         opacity: 1;
     }
 
-}
-
-@keyframes modalUp {
-
-    from {
-        transform: translateY(40px) scale(.96);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
-
-}
-
-/* Mobile */
-
-@media (max-width:768px) {
-
-    .prose h2 {
-        font-size: 1.6rem;
-    }
-
-    .prose h3 {
-        font-size: 1.3rem;
-    }
-
-    .prose p {
-        font-size: 1rem;
-        line-height: 1.9rem;
-    }
-
-}
-.modal-overlay {
-    animation: fadeIn .3s ease;
-}
-
-.modal-card {
-    animation: slideUp .35s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
 }
 
 @keyframes slideUp {
+
     from {
-        opacity:0;
-        transform:translateY(30px);
+
+        opacity: 0;
+        transform: translateY(30px);
+
     }
 
     to {
-        opacity:1;
-        transform:translateY(0);
+
+        opacity: 1;
+        transform: translateY(0);
+
     }
+
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width:768px) {
+
+    :host ::ng-deep .article-content {
+
+        font-size: 1rem;
+        line-height: 1.8rem;
+
+    }
+
+    :host ::ng-deep .article-content h2 {
+
+        font-size: 1.6rem;
+
+    }
+
+    :host ::ng-deep .article-content h3 {
+
+        font-size: 1.35rem;
+
+    }
+
+    :host ::ng-deep .article-content p {
+
+        font-size: 1rem;
+        line-height: 1.9rem;
+
+    }
+
 }

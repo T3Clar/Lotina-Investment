@@ -17,7 +17,7 @@ export class CategoryInsights implements OnInit {
   categoryInfo!: InsightCategory;
   showModal = false;
 
-selectedInsight!: Insight;
+selectedInsight: Insight | null = null;
 
 currentIndex = 0;
 
@@ -41,8 +41,11 @@ insights: Insight[] = [];
 }
 
 closeModal() {
+console.log('category close fired');
 
     this.showModal = false;
+
+    this.selectedInsight = null;
 
     document.body.style.overflow = 'auto';
 

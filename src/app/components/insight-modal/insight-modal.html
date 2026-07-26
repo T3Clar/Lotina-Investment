@@ -1,5 +1,4 @@
-
-@if(insight){
+@if(insight && insight){
 
 <div class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-md p-4"
     (click)="closeModal()">
@@ -71,16 +70,13 @@
 
             <div class="mx-auto max-w-4xl px-8 py-14">
 
-                <p class="mb-10 text-xl leading-9 text-neutral-600">
+                <p class="mb-12 text-xl leading-9 text-black">
 
                     {{ insight.excerpt }}
 
                 </p>
 
-                <div class="prose prose-lg max-w-none" [innerHTML]="insight.content">
-
-                </div>
-
+                <div class="article-content"  [innerHTML]="insight.content"></div>
             </div>
 
             <!-- Footer -->
@@ -128,7 +124,7 @@
                     <div class="mt-12 flex items-center justify-between border-t border-neutral-200 pt-6">
 
                         <button type="button" (click)="previousInsight()" [disabled]="!hasPrevious"
-                            class="group flex items-center gap-2 rounded-full border border-neutral-300 px-5 py-3 transition disabled:cursor-not-allowed disabled:opacity-40 hover:border-[var(--lotina-gold)] hover:text-[var(--lotina-gold)]">
+                            class="group flex items-center gap-2 rounded-full border text-black border-neutral-300 px-5 py-3 transition disabled:cursor-not-allowed disabled:opacity-40 hover:border-[var(--lotina-gold)] hover:text-[var(--lotina-gold)]">
 
                             ← Previous
 

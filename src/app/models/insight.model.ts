@@ -1,6 +1,7 @@
 export interface Insight {
 
   id: number;
+  featured: boolean;
   category: string;
   title: string;
   excerpt: string;
@@ -9,6 +10,7 @@ export interface Insight {
   author: string;
   date: string;
   readTime: string;
+  slug: string;
 
 }
 
@@ -23,5 +25,7 @@ export interface InsightCategory {
   description: string;
 
   articles: number;
+
+  coverImage: string;
 
 }

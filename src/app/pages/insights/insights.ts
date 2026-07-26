@@ -17,7 +17,7 @@ import { InsightService } from '../../services/insight.service';
 export class Insights {
   showModal = false;
 
-  selectedInsight!: Insight;
+  selectedInsight: Insight | null = null;
   constructor(private insightService: InsightService) {}
   get insights(): Insight[] {
   return this.insightService.insights;
@@ -39,6 +39,7 @@ openInsight(insight: Insight): void {
 
   closeModal(): void {
     this.showModal = false;
+    this.selectedInsight = null;
 
     document.body.style.overflow = 'auto';
   }

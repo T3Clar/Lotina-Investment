@@ -1,56 +1,31 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { Insight } from '../../../../models/insight.model';
+import { Output, EventEmitter } from '@angular/core';
+import { InsightService } from '../../../../services/insight.service';
 
-interface MetaItem{
-  type: string;
-  value: string;
-}
 
-interface FeaturedInsightData {
-  category: string;
-  title: string;
-  description: string;
-  image: string;
-  meta: MetaItem[];
-}
 @Component({
   selector: 'app-featured-insight',
-  imports: [RouterLink],
   templateUrl: './featured-insight.html',
   styleUrl: './featured-insight.css',
 })
 export class FeaturedInsight {
+  @Output() readInsight = new EventEmitter<Insight>();
   
- featuredInsight: FeaturedInsightData = {
+  featuredInsight!: Insight;
+  constructor(
+    private insightService: InsightService
+  ) {}
 
-    category: 'Featured Insight',
+  ngOnInit(): void {
 
-    title: 'The Future of Digital Commerce Across Africa',
+    this.featuredInsight =
+      this.insightService.getFeaturedInsight();
 
-    description:
-      'Exploring how innovation, logistics, digital infrastructure, and connected ecosystems are shaping the next generation of African businesses.',
+  }
+openInsight(): void {
 
-    image: 'assets/images/insights/featured-insight.jpg',
+  this.readInsight.emit(this.featuredInsight);
 
-    meta: [
-
-      {
-        type: 'calendar',
-        value: 'May 2026'
-      },
-
-      {
-        type: 'tag',
-        value: 'Investment Strategy'
-      },
-
-      {
-        type: 'clock',
-        value: '8 min read'
-      }
-
-    ]
-
-  };
+}
 }

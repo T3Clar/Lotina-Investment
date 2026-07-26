@@ -11,7 +11,6 @@ interface HeroContent {
 
 @Component({
   selector: 'app-insights-hero',
-  imports: [RouterLink],
   templateUrl: './insights-hero.html',
   styleUrl: './insights-hero.css',
 })
