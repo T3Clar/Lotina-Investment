@@ -1,14 +1,13 @@
-<section id="newsletter" class="bg-white pb-20">
+<section id="newsletter" class="bg-white pb-20 mt-4">
 
-    <div class="mx-auto w-[92%] max-w-7xl">
-
+<div class="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10 xl:px-12">
         <div class="relative overflow-hidden rounded-2xl border border-[#d8c7a1] bg-[#faf8f4]">
 
             <!-- Decorative Pattern -->
 
-            <div class="pointer-events-none absolute bottom-0 right-0 opacity-40">
+            <div class="pointer-events-none absolute bottom-0 right-0 opacity-40 hidden md:block">
 
-                <svg width="340" height="220" viewBox="0 0 340 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="320" height="200" viewBox="0 0 340 220" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                     <path d="M340 220C250 220 180 150 180 60" stroke="#d4a54a" stroke-width="1" />
                     <path d="M340 220C270 220 210 160 210 90" stroke="#d4a54a" stroke-width="1" />
@@ -20,17 +19,17 @@
 
             </div>
 
-            <div class="relative grid items-center gap-10 px-10 py-10 lg:grid-cols-2">
+            <div class="relative grid items-center gap-10 lg:gap-16 px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 py-8 md:py-10 lg:py-12 lg:grid-cols-2">
 
                 <!-- LEFT -->
 
-                <div class="flex items-center gap-8">
+                <div class="flex flex-col sm:flex-rowitems-center sm:items-start text-center sm:text-left gap-6 lg:gap-8">
 
                     <!-- Circle -->
 
-                    <div class="flex h-24 w-24 items-center justify-center rounded-full bg-[var(--lotina-black)]">
+                    <div class="flex h-15 w-15 md:h-24 md:w-20 lg:h-24 lg:w-28 items-center justify-center rounded-full bg-[var(--lotina-black)]">
 
-                        <svg class="h-13 w-13 text-[var(--lotina-gold)]" fill="none" stroke="currentColor"
+                        <svg class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 text-[var(--lotina-gold)]" fill="none" stroke="currentColor"
                             stroke-width="1.7" viewBox="0 0 24 24">
 
                             <rect x="3" y="5" width="18" height="14" rx="2" />
@@ -45,7 +44,7 @@
 
                     <div>
 
-                        <h2 class="mb-3 text-3xl font-light leading-tight text-[var(--lotina-black)]">
+                        <h2 class="mb-3 text-2xl md:h-24 md:w-24 lg:h-28 lg:w-28 font-light leading-tight text-[var(--lotina-black)]">
 
                             Stay Ahead of <br>
 
@@ -53,7 +52,7 @@
 
                         </h2>
 
-                        <p class="max-w-md text-base leading-7 text-neutral-600">
+                        <p class="max-w-md text-sm sm:text-base leading-7 text-neutral-600">
 
                             Receive monthly investment insights,
                             ecosystem news and innovation research.
@@ -69,13 +68,13 @@
                 <div >
                     <!-- Input -->
 
-                    <div id="newsletter" class="flex overflow-hidden scroll-mt-32 rounded-lg border border-neutral-300">
+                    <div id="newsletter" class="flex flex-col sm:flex-row overflow-hidden rounded-lg border border-neutral-300">
 
                         <input type="email" placeholder="Enter your email"
-                            class="flex-1 border-0 text-orange-300 px-6 py-4 outline-none focus:ring-0">
+                            class="flex-1 border-0 text-orange-300 px-5 sm:px-6 py-4 text-sm md:text-base outline-none focus:ring-0">
 
                         <button
-                            class="flex items-center gap-3 bg-[var(--lotina-gold)] px-8 font-semibold uppercase tracking-wide text-[var(--lotina-black)] transition hover:brightness-95">
+                            class="flex items-center justify-center gap-3 bg-[var(--lotina-gold)] px-6 lg:px-8 py-4 font-semibold uppercase tracking-wide text-[var(--lotina-black)] transition hover:brightness-95">
 
                             Subscribe
 

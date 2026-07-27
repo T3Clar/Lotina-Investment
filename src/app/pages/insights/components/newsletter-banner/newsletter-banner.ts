@@ -16,7 +16,7 @@ export class NewsletterBanner {
   sectionTitle = 'Investment Perspectives';
 
   quote =
-    'The next generation of African business will be built on technology, partnerships and long-term thinking.';
+    'The next generation of businesses will be built on technology, partnerships and long-term thinking.';
 
   perspectives: Perspective[] = [
 

@@ -2,12 +2,12 @@
     <div class="max-w-7xl mx-auto px-8">
 
         <!-- Section Header -->
-        <div class="text-center mb-6">
-            <p class="uppercase tracking-[0.35em] text-[#C8A75B] text-xs font-semibold">
+        <div class="text-center mb-3">
+            <p class="uppercase tracking-[0.35em] text-[#C8A75B] text-lg font-semibold">
                 Our Values
             </p>
 
-            <h2 class="mt-4 text-3xl font-light text-white leading-tight">
+            <h2 class="mt-2 text-4xl font-light text-white leading-tight">
                 Why Choose Lotina Investments
             </h2>
         </div>
@@ -17,7 +17,7 @@
             @for(value of values; track value.title){
             <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 h-full">
                 <!-- Title -->
-                <h3 class="text-lg font-light text-white">
+                <h3 class="text-xl font-light text-white">
                     {{ value.title }}
                 </h3>
 
@@ -25,7 +25,7 @@
                 <div class="w-10 h-px bg-[#C8A75B]/60 my-1"></div>
 
                 <!-- Description -->
-                <p class="text-gray-400 text-sm leading-6">
+                <p class="text-gray-400 text-lg leading-6">
                     {{ value.description }}
                 </p>
             </div>

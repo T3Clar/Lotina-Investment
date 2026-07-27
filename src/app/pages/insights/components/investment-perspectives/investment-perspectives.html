@@ -20,13 +20,10 @@
 
         <!-- Topics Row -->
 
-        <div class="flex items-start justify-between">
-
+        <div class=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-8 lg:gap-10 justify-items-center">
             @for(topic of topics; track topic.title){
 
-            <div
-                [routerLink]=""
-                class="group flex w-24 flex-col items-center gap-3 text-center">
+            <div [routerLink]="" class="group flex w-24 flex-col items-center gap-3 text-center">
 
                 <!-- SVG -->
 
@@ -36,130 +33,122 @@
 
 
 
-                     <div
-                    class=" flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5">
+                    <div
+                        class=" flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5">
 
-                    @switch(topic.icon){
+                        @switch(topic.icon){
 
-                    @case('cpu'){
+                        @case('cpu'){
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
-                        stroke="currentColor" stroke-width="1.8"
-                        class="topic-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor"
+                            stroke-width="1.8" class="topic-icon">
 
-                        <rect x="4" y="4" width="16" height="16" rx="2"/>
-                        <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/>
+                            <rect x="4" y="4" width="16" height="16" rx="2" />
+                            <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3" />
 
-                    </svg>
+                        </svg>
 
-                    }
+                        }
 
-                    @case('chart'){
+                        @case('chart'){
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
-                        stroke="currentColor" stroke-width="1.8"
-                        class="topic-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor"
+                            stroke-width="1.8" class="topic-icon">
 
-                        <path d="M3 20h18"/>
-                        <path d="M7 16V9"/>
-                        <path d="M12 16V5"/>
-                        <path d="M17 16v-3"/>
+                            <path d="M3 20h18" />
+                            <path d="M7 16V9" />
+                            <path d="M12 16V5" />
+                            <path d="M17 16v-3" />
 
-                    </svg>
+                        </svg>
 
-                    }
+                        }
 
-                    @case('lightbulb'){
+                        @case('lightbulb'){
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
-                        stroke="currentColor" stroke-width="1.8"
-                        class="topic-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor"
+                            stroke-width="1.8" class="topic-icon">
 
-                        <path d="M9 18h6"/>
-                        <path d="M10 22h4"/>
-                        <path d="M12 2a7 7 0 0 0-4 13c1 1 1 2 1 3h6c0-1 0-2 1-3a7 7 0 0 0-4-13z"/>
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                            <path d="M12 2a7 7 0 0 0-4 13c1 1 1 2 1 3h6c0-1 0-2 1-3a7 7 0 0 0-4-13z" />
 
-                    </svg>
+                        </svg>
 
-                    }
+                        }
 
-                    @case('truck'){
+                        @case('truck'){
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
-                        stroke="currentColor" stroke-width="1.8"
-                        class="topic-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor"
+                            stroke-width="1.8" class="topic-icon">
 
-                        <path d="M1 3h15v13H1z"/>
-                        <path d="M16 8h4l3 3v5h-7"/>
-                        <circle cx="5.5" cy="18.5" r="2"/>
-                        <circle cx="18.5" cy="18.5" r="2"/>
+                            <path d="M1 3h15v13H1z" />
+                            <path d="M16 8h4l3 3v5h-7" />
+                            <circle cx="5.5" cy="18.5" r="2" />
+                            <circle cx="18.5" cy="18.5" r="2" />
 
-                    </svg>
+                        </svg>
 
-                    }
+                        }
 
-                    @case('bar-chart'){
+                        @case('bar-chart'){
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
-                        stroke="currentColor" stroke-width="1.8"
-                        class="topic-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor"
+                            stroke-width="1.8" class="topic-icon">
 
-                        <path d="M5 20V10"/>
-                        <path d="M12 20V5"/>
-                        <path d="M19 20v-8"/>
+                            <path d="M5 20V10" />
+                            <path d="M12 20V5" />
+                            <path d="M19 20v-8" />
 
-                    </svg>
+                        </svg>
 
-                    }
+                        }
 
-                    @case('book'){
+                        @case('book'){
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
-                        stroke="currentColor" stroke-width="1.8"
-                        class="topic-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor"
+                            stroke-width="1.8" class="topic-icon">
 
-                        <path d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 0-4 4z"/>
-                        <path d="M8 4v20"/>
+                            <path d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 0-4 4z" />
+                            <path d="M8 4v20" />
 
-                    </svg>
+                        </svg>
 
-                    }
+                        }
 
-                    @case('handshake'){
+                        @case('handshake'){
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
-                        stroke="currentColor" stroke-width="1.8"
-                        class="topic-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor"
+                            stroke-width="1.8" class="topic-icon">
 
-                        <path d="M8 12l3 3 5-5"/>
-                        <path d="M2 10l5-5 5 5"/>
-                        <path d="M22 10l-5-5-5 5"/>
+                            <path d="M8 12l3 3 5-5" />
+                            <path d="M2 10l5-5 5 5" />
+                            <path d="M22 10l-5-5-5 5" />
 
-                    </svg>
+                        </svg>
 
-                    }
+                        }
 
-                    @case('leaf'){
+                        @case('leaf'){
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
-                        stroke="currentColor" stroke-width="1.8"
-                        class="topic-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor"
+                            stroke-width="1.8" class="topic-icon">
 
-                        <path d="M5 21C15 20 20 15 21 3C9 4 4 9 5 21Z"/>
-                        <path d="M9 15c2-2 5-5 8-8"/>
+                            <path d="M5 21C15 20 20 15 21 3C9 4 4 9 5 21Z" />
+                            <path d="M9 15c2-2 5-5 8-8" />
 
-                    </svg>
+                        </svg>
 
-                    }
+                        }
 
-                    }
+                        }
+
+                    </div>
 
                 </div>
 
-                </div>
+                <!-- Title -->
 
-                <!-- Title --> 
-                 
 
                 <span
                     class="text-sm leading-5 text-white transition duration-300 group-hover:text-[var(--lotina-gold)]">

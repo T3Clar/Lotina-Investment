@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist\\lotina",
+    "public": "dist/lotina/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

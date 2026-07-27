@@ -15,10 +15,10 @@ export class InsightService {
 
       slug: 'future-of-digital-commerce',
 
-      title: 'The Future of Digital Commerce Across Africa',
+      title: 'The Future of Digital Commerce',
 
       excerpt:
-        'Exploring how innovation, logistics, digital infrastructure and connected ecosystems...',
+        'Exploring how innovation, logistics and connected ecosystems...',
 
 
       content: `

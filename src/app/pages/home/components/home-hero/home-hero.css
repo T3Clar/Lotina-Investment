@@ -6,10 +6,9 @@
 
   background-image: url('/homehero.png');
   background-size: cover;
-  background-position: center 20%;
+  background-position: right 20%;
   background-repeat: no-repeat;
-  padding-top: 100px;
-
+  padding-top: 90px;
   display: flex;
   align-items: center;
 
@@ -188,6 +187,7 @@
 
   .hero{
     min-height: 110vh;
+    background-position: center 20%;
   }
 
   .hero-content{
