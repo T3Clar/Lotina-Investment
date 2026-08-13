@@ -1,20 +1,18 @@
-<section class="hero relative min-h-screen bg-contain bg-top bg-no-repeat md:bg-cover md:bg-center">
+<section class="hero relative min-h-screen bg-contain bg-top bg-no-repeat md:bg-cover md:bg-center"
+[style.background-image]="'url(' + hero.backgroundImage + ')'">
   <div class="hero-overlay"></div>
 
   <!-- Added `text-center md:text-left` and `items-center md:items-start` -->
   <div class="hero-content flex-col items-center text-center md:items-start md:text-left">
 
     <h1 class="hero-title">
-      Building Bridges <br>
-      to Better Investments
+     {{hero.title}}
     </h1>
 
     <div class="hero-divider"></div>
 
     <p class="hero-description">
-      Strategic Investments. Business Growth.
-      <br>
-      Long-term Value.
+      {{hero.subtitle }}
     </p>
 
     <div class="hero-values text-lg">
@@ -49,8 +47,8 @@
 
     </div>
 
-    <button routerLink="/ecosystem" class="hero-btn">
-      Explore Our Ecosystem
+    <button routerLink="hero.primaryButtonLink" class="hero-btn">
+      {{ hero.primaryButtonText }}
       <span>→</span>
     </button>
 

@@ -1,16 +1,15 @@
 {
   "hosting": {
+    "site": "lotina-7d50a",
     "public": "dist/lotina/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
+      "**/node_modules/**",
+      "node_modules",
+      ".git",
+      "package-lock.json",
+      "yarn.lock"
     ]
   }
 }

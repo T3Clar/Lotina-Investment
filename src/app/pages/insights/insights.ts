@@ -18,7 +18,9 @@ export class Insights {
   showModal = false;
 
   selectedInsight: Insight | null = null;
-  constructor(private insightService: InsightService) {}
+  constructor(private insightService: InsightService) {
+    this.insightService.loadInsights();
+  }
   get insights(): Insight[] {
   return this.insightService.insights;
 }
